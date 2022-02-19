@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+{# 유저가 로그인도 안했는데 로그아웃?,, #}
+        {% if user.is_authenticated %}
+            <a href="{% url 'signout' %}">로그아웃</a>
+        {% else %}
+            <a href="{% url 'signin' %}">로그인</a>
+            <a href="{% url 'signup' %}">회원가입</a>
+        {% endif %}
+    </div>
+</body>
+</html>
